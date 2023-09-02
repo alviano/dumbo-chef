@@ -44,6 +44,17 @@ def endpoint(path):
     return wrapper
     
 
+@endpoint("/to-zero-simplification-version/")
+async def _(json):
+    program = SymbolicProgram.parse(json["program"])
+    false_predicate = Predicate.parse(json["false_predicate"]).name
+    extra_atoms = [GroundAtom.parse(atom) for atom in json["extra_atoms"]]
+
+    return {
+        "program": str(program.to_zero_simplification_version(false_predicate=false_predicate, extra_atoms=extra_atoms))
+    }
+
+
 @endpoint("/global-safe-variables/")
 async def _(json):
     program = SymbolicProgram.parse(json["program"])
@@ -62,11 +73,10 @@ async def _(json):
 @endpoint("/expand-global-safe-variables/")
 async def _(json):
     program = SymbolicProgram.parse(json["program"])
-    rule = SymbolicRule.parse(json["rule"])
-    variables = json["variables"]
-    
+    expand = {SymbolicRule.parse(key): value for key, value in json["expand"].items()}
+
     return {
-        "program" : str(program.expand_global_safe_variables(rule=rule, variables=variables))
+        "program": str(program.expand_global_safe_variables_in_rules(expand))
     }
 
 
@@ -79,6 +89,6 @@ async def _(json):
     atoms = [rule.head_atom for rule in atoms]
 
     return {
-        "program" : str(program.move_up(*atoms))
+        "program": str(program.move_up(*atoms))
     }
 

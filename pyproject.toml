@@ -8,7 +8,7 @@ packages = [{include = "dumbo_chef"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-dumbo-asp = "^0.0.38"
+dumbo-asp = "^0.0.42"
 uvicorn = "^0.23.2"
 fastapi = "^0.103.0"
 
