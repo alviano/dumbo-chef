@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "dumbo-chef"
+version = "0.1.0"
+description = ""
+authors = ["Mario Alviano <mario.alviano@gmail.com>"]
+readme = "README.md"
+packages = [{include = "dumbo_chef"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+dumbo-asp = "^0.0.38"
+uvicorn = "^0.23.2"
+fastapi = "^0.103.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
