@@ -47,11 +47,10 @@ def endpoint(path):
 @endpoint("/to-zero-simplification-version/")
 async def _(json):
     program = SymbolicProgram.parse(json["program"])
-    false_predicate = Predicate.parse(json["false_predicate"]).name
     extra_atoms = [GroundAtom.parse(atom) for atom in json["extra_atoms"]]
 
     return {
-        "program": str(program.to_zero_simplification_version(false_predicate=false_predicate, extra_atoms=extra_atoms))
+        "program": str(program.to_zero_simplification_version(extra_atoms=extra_atoms))
     }
 
 
