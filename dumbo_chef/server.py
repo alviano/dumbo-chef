@@ -38,7 +38,7 @@ def endpoint(path):
                 return await func(json)
             except Exception as e:
                 return {
-                    "error" : str(e)
+                    "error": str(e)
                 }
         return wrapped
     return wrapper
@@ -76,6 +76,15 @@ async def _(json):
 
     return {
         "program": str(program.expand_global_safe_variables_in_rules(expand))
+    }
+
+
+@endpoint("/expand-global-and-local-variables/")
+async def _(json):
+    program = SymbolicProgram.parse(json["program"])
+
+    return {
+        "program": str(program.expand_global_and_local_variables())
     }
 
 
