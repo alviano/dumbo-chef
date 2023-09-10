@@ -301,14 +301,14 @@ files = [
 
 [[package]]
 name = "dumbo-asp"
-version = "0.0.45"
+version = "0.0.51"
 description = "Utilities for Answer Set Programming"
 category = "main"
 optional = false
 python-versions = ">=3.10,<4.0"
 files = [
-    {file = "dumbo_asp-0.0.45-py3-none-any.whl", hash = "sha256:14c4f1b8659abeb23607207d1b10abba7cdebdfb9fc9ca3273435c00896bbf23"},
-    {file = "dumbo_asp-0.0.45.tar.gz", hash = "sha256:69be386b962c1f9f5c9bc4b5ceab5d704f5e6b745ef7ca2570a07dd56fb369f2"},
+    {file = "dumbo_asp-0.0.51-py3-none-any.whl", hash = "sha256:0b70ea7176a2057902546ba7b003394e04adb52ca622accfe3baf2610841aadc"},
+    {file = "dumbo_asp-0.0.51.tar.gz", hash = "sha256:a14b6efeb888b480d990af9e07236c426b4fbfbef2b697cb0dc7341264d6e575"},
 ]
 
 [package.dependencies]
@@ -769,14 +769,14 @@ six = ">=1.5"
 
 [[package]]
 name = "pytz"
-version = "2023.3"
+version = "2023.3.post1"
 description = "World timezone definitions, modern and historical"
 category = "main"
 optional = false
 python-versions = "*"
 files = [
-    {file = "pytz-2023.3-py2.py3-none-any.whl", hash = "sha256:a151b3abb88eda1d4e34a9814df37de2a80e301e68ba0fd856fb9b46bfbbbffb"},
-    {file = "pytz-2023.3.tar.gz", hash = "sha256:1d8ce29db189191fb55338ee6d0387d82ab59f3d00eac103412d64e0ebd0c588"},
+    {file = "pytz-2023.3.post1-py2.py3-none-any.whl", hash = "sha256:ce42d816b81b68506614c11e8937d3aa9e41007ceb50bfdcb0749b921bf646c7"},
+    {file = "pytz-2023.3.post1.tar.gz", hash = "sha256:7b4fddbeb94a1eba4b557da24f19fdf9db575192544270a9101d8509f9f43d7b"},
 ]
 
 [[package]]
@@ -944,4 +944,4 @@ six = "*"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "ed5267fc6c6d958ff2fd1206fd753183796ac10b9d0a483b21d84cf2cc6c3d7b"
+content-hash = "929ee52b8f56fdae5d136dbf8caa5c0eee30b88a4a86e0526f5f5d66d333e3db"
